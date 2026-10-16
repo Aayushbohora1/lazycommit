@@ -28,9 +28,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_USER/lazycommit.git"
+    "url": "https://github.com/Aayushbohora1/lazycommit.git"
   },
-  "homepage": "https://lazycommit.dev",
+  "bugs": {
+    "url": "https://github.com/Aayushbohora1/lazycommit/issues"
+  },
+  "homepage": "https://github.com/Aayushbohora1/lazycommit#readme",
   "files": [
     "src/",
     "README.md",

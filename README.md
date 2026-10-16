@@ -28,7 +28,7 @@ lazycommit --dry     # preview only, do not commit
 
 - **Heuristic (free, offline)** — uses filename + diff keywords. Zero deps, runs anywhere.
 - **AI (paid, hosted)** — calls `api.lazycommit.dev` for subject + body. Free 5/day, then $5/mo.
-  Get a key: [lazycommit.dev/pricing](https://lazycommit.dev/pricing)
+  Get a key: contact hi@lazycommit.dev
 
 ## Why
 
