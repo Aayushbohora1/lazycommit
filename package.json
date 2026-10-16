@@ -1,0 +1,39 @@
+{
+  "name": "lazycommit",
+  "version": "0.1.0",
+  "description": "Generate conventional commit messages from your staged git diff. Free forever, AI-powered with --ai flag.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "lazycommit": "src/index.js",
+    "lc": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test test/",
+    "demo": "node test/demo.js"
+  },
+  "keywords": [
+    "git",
+    "commit",
+    "conventional-commits",
+    "cli",
+    "ai",
+    "developer-tools"
+  ],
+  "author": "Aayush <noreply@lazycommit.dev>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USER/lazycommit.git"
+  },
+  "homepage": "https://lazycommit.dev",
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ]
+}

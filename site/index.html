@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lazycommit — smart commit messages from your diff</title>
+<meta name="description" content="A tiny CLI that writes conventional commit messages from your staged diff. Free forever offline; AI mode for $5/mo.">
+<style>
+  :root { --bg: #0e0f12; --fg: #e6e8ee; --muted: #9aa0aa; --accent: #7cf2c5; --code: #11131a; --border: #1f2229; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.55; }
+  main { max-width: 760px; margin: 0 auto; padding: 64px 24px 96px; }
+  h1 { font-size: 44px; line-height: 1.15; margin: 0 0 12px; letter-spacing: -0.02em; }
+  h2 { font-size: 22px; margin: 48px 0 12px; letter-spacing: -0.01em; }
+  p { color: var(--fg); margin: 0 0 16px; }
+  .sub { color: var(--muted); font-size: 18px; margin: 0 0 36px; }
+  pre, code { font-family: ui-monospace, "JetBrains Mono", Menlo, monospace; }
+  pre { background: var(--code); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; overflow-x: auto; font-size: 14px; line-height: 1.5; }
+  code { background: var(--code); padding: 1px 6px; border-radius: 4px; font-size: 0.92em; }
+  .term { background: var(--code); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin: 24px 0; font-size: 14px; }
+  .term .p { color: var(--accent); }
+  .install { display: inline-block; background: var(--accent); color: #0e0f12; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; }
+  .install:hover { filter: brightness(1.05); }
+  .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin: 8px 0 0; }
+  .btn { background: transparent; border: 1px solid var(--border); color: var(--fg); padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 500; }
+  .btn:hover { border-color: var(--muted); }
+  .price { background: var(--code); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-top: 8px; }
+  .price h3 { margin: 0 0 4px; }
+  .price .amt { font-size: 32px; font-weight: 700; }
+  .price ul { padding-left: 20px; color: var(--muted); margin: 12px 0 16px; }
+  footer { color: var(--muted); font-size: 14px; margin-top: 64px; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>lazycommit</h1>
+  <p class="sub">Smart commit messages from your staged diff. Free forever offline, AI mode for $5/mo.</p>
+  <a class="install" href="https://github.com/YOUR_USER/lazycommit">View on GitHub →</a>
+
+  <div class="term"><span class="p">$</span> npm i -g lazycommit<br>
+<span class="p">$</span> git add -p<br>
+<span class="p">$</span> lazycommit -c<br>
+feat(auth): add token expiry guard<br>
+[master 8a3f9c2] feat(auth): add token expiry guard</div>
+
+  <h2>Why</h2>
+  <p>Writing good commit messages is busywork. <code>lazycommit</code> reads your staged diff, picks a conventional-commit type from the filenames and content, and prints a one-liner in &lt;100ms. Edit it if you care. Ship it if you don't.</p>
+
+  <h2>Two modes</h2>
+  <p><strong>Heuristic (free)</strong> — runs offline, zero deps, no telemetry. Good enough for most diffs.</p>
+  <p><strong>AI (paid)</strong> — calls Claude via our hosted API. Higher-quality subjects and a body line when the diff is non-trivial. 5 free generations/day per IP, then <strong>$5/mo unlimited</strong>.</p>
+
+  <h2>Install</h2>
+  <pre>npm i -g lazycommit</pre>
+
+  <h2>Usage</h2>
+  <pre>lazycommit           # print a conventional commit message
+lazycommit -c        # print and `git commit -m` it
+lazycommit --ai      # use hosted AI (set LAZYCOMMIT_API_KEY)
+lazycommit --dry     # preview only</pre>
+
+  <h2 id="pricing">Pricing</h2>
+  <div class="price">
+    <h3>Heuristic</h3>
+    <div class="amt">$0</div>
+    <ul>
+      <li>Unlimited, offline</li>
+      <li>Zero dependencies</li>
+      <li>MIT licensed</li>
+    </ul>
+  </div>
+  <div class="price">
+    <h3>AI mode</h3>
+    <div class="amt">$5/mo</div>
+    <ul>
+      <li>Hosted, no setup</li>
+      <li>Higher-quality messages</li>
+      <li>Cancel anytime</li>
+    </ul>
+    <a class="install" href="https://buy.stripe.com/lazycommit-pro">Upgrade →</a>
+    <p style="color:var(--muted); font-size:13px; margin-top:12px;">Or try free: 5 generations/day per IP, no signup.</p>
+  </div>
+
+  <footer>
+    <a href="https://github.com/YOUR_USER/lazycommit">GitHub</a> ·
+    <a href="https://www.npmjs.com/package/lazycommit">npm</a> ·
+    <a href="mailto:hi@lazycommit.dev">Contact</a>
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,16 @@
+name = "lazycommit-api"
+main = "api/worker.js"
+compatibility_date = "2026-10-01"
+
+[observability]
+enabled = true
+
+# After: wrangler kv namespace create "lazycommit-rate-limit"
+# [[kv_namespaces]]
+# binding = "RATE_LIMIT"
+# id = "..."
+
+# Secrets (set via `wrangler secret put`):
+#   ANTHROPIC_API_KEY
+#   STRIPE_SECRET_KEY
+#   PRO_KEYS   (JSON: {"key_xxx": {"stripeCustomerId":"cus_xxx","expiresAt":"2026-11-16"}})
